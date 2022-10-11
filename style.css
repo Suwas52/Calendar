@@ -1,0 +1,121 @@
+/* Import Google font - Poppins  */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  color: white;
+  display: flex;
+  background-color: rgba(35, 60, 173, 0.4);
+  align-items: center;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 450px;
+  background-color: rgba(4, 2, 82, 0.534);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.wrapper header {
+  padding: 25px 20px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: rgb(201, 195, 238);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+header .icons {
+  position: relative;
+  left: 90px;
+}
+
+header .icons span {
+  height: 38px;
+  width: 38px;
+  margin: 0 1px;
+  text-align: center;
+  line-height: 38px;
+  /* background-color: rgba(120, 117, 214, 0.534); */
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+header .icons span:hover {
+  background: rgb(135, 162, 235);
+}
+
+header .icons span:last-child {
+  margin-right: -10px;
+}
+
+.calendar {
+  padding: 20px;
+}
+
+.calendar ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.calendar .days {
+  margin-bottom: 20px;
+}
+
+.calendar .weeks li {
+  font-weight: 600;
+}
+
+
+.calendar ul li {
+    position: relative;
+    width: calc(100% / 7);
+    text-align: center;
+}
+
+.calendar .days li {
+   z-index: 1; 
+  cursor: pointer;
+  margin-top: 30px;  
+}
+
+.days li.inactive {
+    color: #aaa;
+}
+
+.days li.active {
+    color: #000;
+}
+
+.calendar .days li::before {
+  position: absolute;
+  content: "";
+  height: 40px;
+  width: 40px;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  border-radius: 10px;
+  transform: translate(-50%, -45%);
+}
+
+.days li:hover::before {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  background: rgb(209, 194, 194);
+}
+
+
+.days li.active::before {
+    background: rgb(236, 186, 186);
+}
